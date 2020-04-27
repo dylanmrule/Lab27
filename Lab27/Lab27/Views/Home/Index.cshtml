@@ -1,0 +1,21 @@
+﻿@model Lab27.API__Models.ZipToLatLon
+@{
+
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form method="post">
+        <label for="lat">Latitude</label>
+        <input type="text" name="lat" />
+        <label for="lon">Longitude</label>
+        <input type="text" name="lon" />
+        <button asp-controller="Home" asp-action="Forecast">Submit Here</button>
+        </form>
+    <form method="post">
+        <label for="zip">Zip Code</label>
+        <input type="number" name="zip" />
+        <button asp-controller="Home" asp-action="Zip">Submit Here</button>
+    </form>
+</div>

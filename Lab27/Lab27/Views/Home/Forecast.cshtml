@@ -1,0 +1,15 @@
+﻿@model Lab27.API__Models.Weather
+@{
+    ViewData["Title"] = "Forecast";
+}
+
+<h1>Forecast for @Model.productionCenter</h1>
+<span></span>
+
+@for (int i = 0; i < Model.Time.StartPeriodName.Length; i++)
+{
+    <p>
+        <h3>@Model.Time.StartPeriodName[i]</h3>
+            @Model.Data.Text[i]
+    </p>
+}
